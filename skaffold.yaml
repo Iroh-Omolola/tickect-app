@@ -28,3 +28,11 @@ profiles:
         manual:
          - src: "**/*.js"
            dest: .
+    - image: us.gcr.io/ticketing-dev-377906/tickets
+      context: tickets
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.ts'
+            dest: .
